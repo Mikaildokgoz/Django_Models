@@ -27,6 +27,18 @@ class Student(models.Model):
     class Meta:
         ordering = ["number"]
         verbose_name_plural = "Öğrenciler"
+    
+    
+    
+class Doctors(models.Model):
+    
+    doctors_name = models.CharField(max_length=50)
+    
+    def __str__(self):
+        return self.doctors_name
+    class Meta:
+        ordering = ["doctors_name"]
+        verbose_name_plural = "Doktorlar"
         
 
         
